@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+// Custom basic button for mobile app and website
 class CustomButton extends StatelessWidget {
   // Global Variables
   VoidCallback onTap;
@@ -76,11 +77,13 @@ class CustomButton extends StatelessWidget {
   }
 }
 
+// Custom Primary Button
 class PrimaryButton extends CustomButton {
   PrimaryButton({super.key, required super.onTap, required super.text})
     : super(color: Colors.blue, textColor: Colors.white);
 }
 
+// Custom Outline Button
 class OutlineButton extends CustomButton {
   OutlineButton({super.key, required super.onTap, required super.text})
     : super(

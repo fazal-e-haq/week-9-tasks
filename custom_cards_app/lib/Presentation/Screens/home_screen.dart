@@ -48,72 +48,74 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(title: Text('Stats Card')),
 
       body: SafeArea(
-        child: ListView(
-          children: [
-            BaseCard(
-              elevation: 5,
-              color: Colors.white12,
-              borderRadius: 30,
-              child: SizedBox(
-                width: 300,
-                child: Column(
-                  crossAxisAlignment: .start,
-                  children: [
-                    Center(child: Icon(Icons.snapchat, size: 150)),
-                    SizedBox(height: 30),
-                    Text(
-                      'Lorem ipsum\ndolor sit amet,',
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    Text(
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
-                    SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: .spaceEvenly,
-                      children: [
-                        Text(
-                          'Rs 20',
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        Text(
-                          '★★★★',
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 8),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
 
-                    SizedBox(
-                      width: .infinity,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: Text('Add to cart'),
+          child: ListView(
+            children: [
+              BaseCard(
+                elevation: 5,
+                color: Colors.white12,
+                borderRadius: 30,
+                child: SizedBox(
+                  width: 300,
+                  child: Column(
+                    crossAxisAlignment: .start,
+                    children: [
+                      Center(child: Icon(Icons.snapchat, size: 150)),
+                      SizedBox(height: 30),
+                      Text(
+                        'Lorem ipsum\ndolor sit amet,',
+                        style: Theme.of(context).textTheme.headlineMedium,
                       ),
-                    ),
-                  ],
+                      Text(
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                      SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: .spaceEvenly,
+                        children: [
+                          Text(
+                            'Rs 20',
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                          Text(
+                            '★★★★',
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 8),
+
+                      SizedBox(
+                        width: .infinity,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Add to cart'),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 20),
-            UserCard(
-              color: [Colors.blue, Colors.white24],
-              name: 'F a z a l',
-              address: 'sgiuwdgiuagduiwgdiuagd',
-              age: 20,
-              nationality: 'Pakistan',
-              dateOfBirth: '21-01-2023',
-            ),
-            SizedBox(height: 20),
-            NewsCard(),
-            SizedBox(height: 20),
-
-            // buildSwipeToDelStates(),
-          ],
+              SizedBox(height: 20),
+              UserCard(
+                color: [Colors.blue, Colors.white24],
+                name: 'F a z a l',
+                address: 'sgiuwdgiuagduiwgdiuagd',
+                age: 20,
+                nationality: 'Pakistan',
+                dateOfBirth: '21-01-2023',
+              ),
+              SizedBox(height: 20),
+              NewsCard(),
+              SizedBox(height: 20),
+            ],
+          ),
         ),
       ),
     );

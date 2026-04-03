@@ -6,7 +6,7 @@ class NewsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.widthOf(context) / 1.1,
+      width: MediaQuery.widthOf(context) / 1.05,
 
       decoration: BoxDecoration(
         borderRadius: .circular(15),

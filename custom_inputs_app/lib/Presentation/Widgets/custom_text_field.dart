@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class CustomTextField extends StatelessWidget {
+  // Global variables
   String hintText;
   TextEditingController controller;
   Widget? lable;
@@ -13,6 +14,8 @@ class CustomTextField extends StatelessWidget {
   TextInputType? keyboardType;
   TextAlign textAlign;
   void Function(String)? onChanged;
+  double borderRadius;
+  // Constructor
   CustomTextField({
     super.key,
     this.obscureText = false,
@@ -26,12 +29,12 @@ class CustomTextField extends StatelessWidget {
     this.keyboardType,
     this.inputFormatters,
     this.onChanged,
+    this.borderRadius = 10,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-
       onChanged: onChanged,
       textAlign: textAlign,
       keyboardType: keyboardType,
@@ -45,9 +48,11 @@ class CustomTextField extends StatelessWidget {
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         filled: true,
-        enabledBorder: OutlineInputBorder(borderRadius: .circular(10)),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: .circular(borderRadius),
+        ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: .circular(10),
+          borderRadius: .circular(borderRadius),
           borderSide: BorderSide(width: 2),
         ),
       ),

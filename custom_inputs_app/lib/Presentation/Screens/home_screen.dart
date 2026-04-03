@@ -28,7 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: CustomTextField(
           controller: searchController,
-          hintText: 'Search',
+          hintText: 'Search here',
+          borderRadius: 100,
           suffixIcon: IconButton(
             onPressed: () {
               searchController.clear();

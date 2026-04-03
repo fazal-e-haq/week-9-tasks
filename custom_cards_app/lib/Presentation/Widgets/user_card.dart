@@ -25,8 +25,11 @@ class UserCard extends StatelessWidget {
     return Container(
       width: MediaQuery.widthOf(context) / 1.3,
       decoration: BoxDecoration(
-
-        gradient: LinearGradient(colors: color),
+        gradient: LinearGradient(
+          colors: color,
+          begin: .topLeft,
+          end: .bottomRight,
+        ),
         boxShadow: [
           BoxShadow(
             color: Colors.black,
@@ -54,7 +57,10 @@ class UserCard extends StatelessWidget {
                   style: TextStyle(fontSize: 15),
                 ),
                 Text('Adress : $address', style: TextStyle(fontSize: 15)),
-                Text('Nationality : $nationality', style: TextStyle(fontSize: 15)),
+                Text(
+                  'Nationality : $nationality',
+                  style: TextStyle(fontSize: 15),
+                ),
               ],
             ),
             SizedBox(height: 30),
