@@ -8,6 +8,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // Custom bottom sheet
   void showCustomBottomSheet(BuildContext context) {
     showModalBottomSheet(
       elevation: 8,
@@ -65,6 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // Alert Dialog
   void customAlertDialog(BuildContext context) {
     showDialog<void>(
       context: context,
@@ -94,6 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // Alert Dialog with form
   void customDialogWithForm(BuildContext context) {
     showDialog<void>(
       context: context,
@@ -129,6 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // Filter bottom sheet
   void showFilterSheet(BuildContext context) {
     showModalBottomSheet(
       useSafeArea: true,
